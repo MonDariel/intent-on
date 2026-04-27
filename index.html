@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intent-0n — Agent Competition Layer for Jaine DEX</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="chat.css">
+</head>
+<body>
+  <div class="scroll-progress"></div>
+  <div class="orb one"></div><div class="orb two"></div><div class="orb three"></div>
+  <nav class="site-nav"><div class="container nav-inner"><a href="index.html#home" class="brand"><img data-logo class="brand-logo" src="assets/logo.png" alt="Intent-0n logo"><div class="brand-text">Intent<span>-0n</span></div></a><ul class="nav-links"><li><a href="index.html#home">Home</a></li><li><a href="index.html#builder">Intent Builder</a></li><li><a href="agents.html">Agents</a></li><li><a href="create-agent.html">Create Agent</a></li><li><a href="index.html#roadmap">Roadmap</a></li></ul><span class="nav-badge">Prototype</span></div></nav>
+  <main>
+    <section id="home" class="hero"><div class="container hero-grid"><div><div class="hero-eyebrow"><i></i> Jaine DEX · 0G</div><h1 class="hero-title"><span class="brand-line" data-brand>Intent-0n</span><span class="sub-line" data-subtagline>Intent-first DeFi, powered by competing agents.</span></h1><p class="tagline">"<span data-tagline>Users plant financial intents. Agents compete to harvest the best outcome.</span>"</p><p class="hero-desc">Describe what you want in plain language. Intent-0n turns goals into a competitive agent market where specialized solvers fight to produce the best Jaine DEX execution route, with future intent history stored on 0G.</p><div class="btn-row"><a class="btn btn-primary" href="#builder">Plant an Intent</a><a class="btn btn-secondary" href="agents.html">Explore Agents</a><a class="btn btn-ghost" href="create-agent.html">Create Your Agent</a></div><div class="hero-stats" data-hero-stats></div></div><div class="hero-logo-panel panel manga-panel"><div class="logo-orbit"></div><span class="anime-corner">SYSTEM: INTENT MODE</span><img data-logo src="assets/logo.png" class="hero-logo" alt="Intent-0n logo"><div class="system-chip">// Intent-0n lets you describe what you want, and agents compete to get the best result for you.</div></div></div></section>
+    <div class="section-divider"></div>
+    <section id="problem"><div class="container"><span class="section-tag">01. The Problem</span><h2>DeFi still asks users to act like <span class="accent">pro traders</span>.</h2><p class="lead">Most people think in goals: safe yield, AI exposure, downside protection, or portfolio balance. Traditional DeFi forces them to translate those goals into manual swaps, LPs, routes, risk checks, and strategy decisions.</p><div class="card-grid"><article class="problem-card"><div class="icon">⚙️</div><div class="num">PROBLEM_01</div><h3>Execution overload</h3><p>Users must understand routing, slippage, liquidity pools, impermanent loss, volatility, and yield risk before they can take action.</p></article><article class="problem-card"><div class="icon">🧠</div><div class="num">PROBLEM_02</div><h3>Goals are not orders</h3><p>A user says, “I want low-risk yield,” but most apps only accept exact trades or strategy choices. The intent layer is missing.</p></article><article class="problem-card"><div class="icon">🔮</div><div class="num">PROBLEM_03</div><h3>Agents lack competition</h3><p>Most bots are isolated black boxes. Intent-0n turns agents into a visible market where performance, fit, and risk can be compared.</p></article></div></div></section>
+    <div class="section-divider"></div>
+    <section id="solution" class="flow-section"><div class="container"><span class="section-tag">02. The Solution</span><h2>Write the intent. Let agents <span class="accent">duel for the outcome</span>.</h2><p class="lead">Intent-0n is not a normal trading bot and not a normal yield farm. It is a coordination layer: users express goals, agents compete, and the best match becomes an execution preview.</p><div class="flow-steps"><div class="flow-step"><span class="step-num">Step 01</span><span class="step-icon">🌙</span><h4>Natural Intent</h4><p>User describes the desired outcome in plain language.</p></div><div class="flow-step"><span class="step-num">Step 02</span><span class="step-icon">⚔️</span><h4>Agent Market</h4><p>Specialized agents compete with different strategies.</p></div><div class="flow-step"><span class="step-num">Step 03</span><span class="step-icon">🏆</span><h4>Score Engine</h4><p>The system scores fit by risk, goal, text signals, and agent metrics.</p></div><div class="flow-step"><span class="step-num">Step 04</span><span class="step-icon">⚡</span><h4>Jaine Route</h4><p>The winner produces a simulated Jaine DEX execution path.</p></div><div class="flow-step"><span class="step-num">Step 05</span><span class="step-icon">💾</span><h4>0G Record</h4><p>Future versions store intents, bids, outcomes, and reputation on 0G.</p></div></div></div></section>
+    <div class="section-divider"></div>
+    <section id="builder"><div class="container"><span class="section-tag">03. Intent Builder</span><h2>The main feature: <span class="accent">describe your intention</span>.</h2><p class="lead">Choices are useful, but natural language is the soul of Intent-0n. Tell the system what you actually want, then let the agents compete.</p><div class="builder-card panel manga-panel"><div class="builder-grid"><div><div class="form-group"><label class="form-label" for="intent-text">Natural-language intent <span id="intent-count" class="char-count">0/240</span></label><textarea id="intent-text" maxlength="240" class="intent-textarea" placeholder="I want safe yield from USDC for 30 days with low risk, but I also want some exposure to AI tokens if possible."></textarea></div><div class="structured-grid"><div class="form-group"><label class="form-label" for="goal-sel">Goal</label><select id="goal-sel"><option value="yield">Safe Yield</option><option value="ai">AI Token Exposure</option><option value="rebalance">Portfolio Rebalance</option><option value="hedge">Downside Protection</option></select></div><div class="form-group"><label class="form-label" for="asset-sel">Asset</label><select id="asset-sel"><option value="USDC">USDC</option><option value="0G">0G</option><option value="ETH">ETH</option><option value="BTC">BTC</option><option value="AI Basket">AI Token Basket</option></select></div></div></div><div><div class="structured-grid"><div class="form-group"><label class="form-label" for="amount-inp">Amount</label><div class="amount-wrap"><input type="number" id="amount-inp" value="5000" min="100"></div></div><div class="form-group"><label class="form-label" for="dur-sel">Duration</label><select id="dur-sel"><option value="7">7 Days</option><option value="30" selected>30 Days</option><option value="90">90 Days</option></select></div></div><div class="form-group"><label class="form-label">Risk Tolerance</label><div class="risk-selector"><button class="risk-btn low active" data-risk="low" type="button">Low</button><button class="risk-btn med" data-risk="med" type="button">Medium</button><button class="risk-btn high" data-risk="high" type="button">High</button></div></div><div class="intent-summary-box">Intent text influences the mock scoring. Keywords like safe, protect, AI, alpha, copy, rebalance, or aggressive can push different agents higher.</div></div></div><button class="btn btn-primary run-btn" id="run-btn" onclick="runCompetition()">Run Agent Competition</button></div><div id="results-section" class="results-section"></div><div id="exec-section" class="exec-route"><p class="kicker">// Execution Route Preview</p><div id="route-flow" class="route-flow"></div><div class="disclaimer"><strong>Prototype simulation.</strong> No real funds are moved, no wallet is connected, and no blockchain transaction is initiated.</div></div></div></section>
+    <div class="section-divider"></div>
+	<section id="architecture">
+	<div class="container">
+
+		<span class="section-tag">04. Architecture</span>
+
+		<h2>
+		  Designed for <span class="cyan">0G</span> + 
+		  <span class="accent">Jaine</span>.
+		</h2>
+
+		<p class="lead">
+		  The prototype is UI-only today, but the future architecture is simple:
+		  0G stores intent and agent data, agents produce competing solutions,
+		  and Jaine DEX acts as the execution and liquidity layer.
+		</p>
+
+		<div class="arch-grid">
+
+		  <!-- 0G -->
+		  <article class="arch-card">
+			<div class="icon">💾</div>
+			<h3>0G data layer</h3>
+			<p>
+			  Future storage for user intents, solver proposals, score history,
+			  execution records, and reputation proofs.
+			</p>
+		  </article>
+
+		  <!-- Agent Network -->
+		  <article class="arch-card">
+			<div class="icon">🤖</div>
+			<h3>Agent network</h3>
+			<p>
+			  Agents read intents and produce strategy proposals based on their
+			  skill modules, risk styles, and specialties.
+			</p>
+		  </article>
+
+		  <!-- Jaine DEX (CLICKABLE) -->
+		  <a 
+			href="https://jaine.app" 
+			target="_blank" 
+			style="text-decoration: none; color: inherit;"
+		  >
+			<article class="arch-card">
+			  <div class="icon">
+			  <img src="assets/jaine-logo.png" alt="Jaine DEX" class="arch-icon-img">
+			  </div>
+			  <h3 class="arch-title">Jaine DEX</h3>
+			  <p>
+				Future execution and liquidity layer for swap routes, LP positions,
+				and strategy settlement.
+			  </p>
+			</article>
+		  </a>
+
+		  <!-- Settlement -->
+		  <article class="arch-card">
+			<div class="icon">🏛️</div>
+			<h3>Settlement future</h3>
+			<p>
+			  Smart contracts can later handle staking, rewards, slashing,
+			  execution verification, and agent reputation.
+			</p>
+		  </article>
+
+		</div>
+	</div>
+	</section>
+    <section id="market"><div class="wide-container"><div class="market-header-row"><div><span class="section-tag">05. Agent Network Preview</span><h2>Not just 6 agents — a future <span class="accent">agent ecosystem</span>.</h2><p class="lead" style="margin-bottom:0">Six featured agents have full profiles today. More experimental agents are shown as a future network preview.</p></div><div class="market-stats"><span class="market-stat"><b>24+</b> future agents</span><span class="market-stat"><b>6</b> featured</span><span class="market-stat"><b>16</b> visible concepts</span></div></div><div class="agent-grid" data-agent-grid data-limit="6" data-short="true"></div><div class="network-video-strip"><video src="assets/agents/network-loop.mp4" muted playsinline loop data-autoplay-video></video></div><div class="teaser-grid" data-teaser-grid data-limit="10"></div><div class="btn-row" style="margin-top:1.4rem;justify-content:center"><a class="btn btn-secondary" href="agents.html">Open full agent page</a><a class="btn btn-primary" href="create-agent.html">Create your own agent</a></div></div></section>
+    <div class="section-divider"></div>
+    <section id="roadmap"><div class="container"><span class="section-tag">06. Roadmap</span><h2>From anime prototype to <span class="accent">real protocol layer</span>.</h2><p class="lead">This hackquest build proves the product flow first. Solidity, solver SDKs, and real Jaine integration can come after the UX and mechanism are clear.</p><div class="roadmap-track"><div class="roadmap-item done"><div class="roadmap-dot">1</div><div class="roadmap-content"><span class="phase-tag">Phase 01 — Now</span><h3>Frontend simulation</h3><p>Natural-language intent builder, agent competition, animated marketplace placeholders, support bot, and custom agent creator.</p></div></div><div class="roadmap-item"><div class="roadmap-dot">2</div><div class="roadmap-content"><span class="phase-tag">Phase 02</span><h3>Open agent registry + mock SDK</h3><p>Allow builders to register solver agents, install skills, and submit proposal logic in a structured format.</p></div></div><div class="roadmap-item"><div class="roadmap-dot">3</div><div class="roadmap-content"><span class="phase-tag">Phase 03</span><h3>0G intent storage</h3><p>Store intent data, proposals, scoring history, and execution outcomes for transparent agent reputation.</p></div></div><div class="roadmap-item"><div class="roadmap-dot">4</div><div class="roadmap-content"><span class="phase-tag">Phase 04</span><h3>Jaine DEX execution + settlement</h3><p>Route winning strategies through Jaine DEX and settle agent rewards, staking, and reputation on-chain.</p></div></div></div></div></section>
+  </main>
+  <footer><div class="container"><img data-logo class="footer-logo" src="assets/logo.png" alt="Intent-0n logo"><div class="footer-brand" data-brand>Intent-0n</div><p>Built for the 0G × Jaine ecosystem</p><p>Intent-0n is a prototype for intent-based agent competition in DeFi. No real assets involved.</p><ul class="footer-links"><li><a href="index.html#home">Home</a></li><li><a href="index.html#builder">Intent Builder</a></li><li><a href="agents.html">Agents</a></li><li><a href="create-agent.html">Create Agent</a></li><li><a href="index.html#roadmap">Roadmap</a></li></ul></div></footer>
+  <script src="config.js"></script><script src="data/agents.js"></script><script src="app.js"></script>
+</body>
+
+</html>
